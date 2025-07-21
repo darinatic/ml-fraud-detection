@@ -1,0 +1,39 @@
+# Logs
+logs/
+*.log
+
+# Environment variables
+.env
+.env.local
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Virtual environments
+venv/
+env/
+ENV/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Docker
+.docker/
+
+# Model artifacts (will add back selectively)
+models/*.pkl
+models/*.joblib
+
+# Temporary files
+*.tmp
+*.temp
