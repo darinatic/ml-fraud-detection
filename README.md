@@ -1,24 +1,44 @@
 # Fraud Detection ML Pipeline
 
-A fraud detection ML pipeline project with initial setup and configuration.
+A complete fraud detection ML pipeline with MLflow, Airflow orchestration, and real-time inference capabilities.
 
-## Current Status
+## Current Status - Phase 2
 
-This project is in initial setup phase. The repository currently contains basic configuration for the fraud detection pipeline components.
+Phase 2 implementation is complete! The project now includes full ML pipeline infrastructure with:
 
-## Files in Repository
+## Components
 
+### Core Services
+- **Airflow** - Workflow orchestration and scheduling
+- **MLflow** - ML model tracking and registry
+- **Inference Service** - Real-time fraud prediction API
+- **Producer Service** - Data ingestion and processing
+
+### Infrastructure
+- `docker-compose.yml` - Multi-service Docker configuration
+- `config.yaml` - Pipeline configuration
 - `init-multiple-dbs.sh` - Database initialization script
-- `wait-for-it.sh` - Utility script for service dependencies
+- `wait-for-it.sh` - Service dependency management
 
-## Next Steps
+### ML Pipeline
+- `dags/fraud_detection_training_dag.py` - Airflow DAG for model training
+- `dags/fraud_detection_training.py` - Training pipeline logic
+- `models/` - Trained model artifacts
 
-The project will include components for:
-- Data processing and feature engineering
-- ML model training and evaluation  
-- Real-time inference capabilities
-- Monitoring and logging
+### Services
+- `airflow/` - Airflow service configuration
+- `mlflow/` - MLflow tracking server setup  
+- `inference/` - Real-time prediction service
+- `producer/` - Data producer service
 
 ## Getting Started
 
-Clone the repository and explore the initial configuration files to understand the project structure.
+1. Clone the repository
+2. Run `docker-compose up` to start all services
+3. Access Airflow UI for pipeline management
+4. Use MLflow for model tracking and versioning
+5. Call inference endpoints for real-time predictions
+
+## Architecture
+
+The pipeline provides end-to-end fraud detection capabilities from data ingestion through model training to real-time inference, all orchestrated through Airflow with MLflow for experiment tracking.
